@@ -1,34 +1,120 @@
 ---
-import '../../src/styles/globals.css';
-import '@fontsource-variable/inter/wght.css';
-import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
-interface Props {
-    title: string;
-}
-
-const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>{title}</title>
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
-    </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
-                <Header />
-                <main class="grow"><slot /></main>
-                <Footer />
-            </div>
-        </div>
-    </body>
+<html>
+  <head>
+    <title>Junghoon Nam</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+
+        /* 🔥 당신이 올린 배경 이미지 */
+        background-image: url("/mybackground.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        color: white;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .logo a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .name {
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      .composer {
+        font-size: 18px;
+        letter-spacing: 4px;
+        margin-top: 5px;
+      }
+
+      nav {
+        display: flex;
+        gap: 50px;
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav a:hover {
+        opacity: 0.6;
+      }
+
+      .sns {
+        margin-bottom: 50px;
+      }
+
+      .sns img {
+        width: 28px;
+        height: 28px;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 80px;
+        background: rgba(0,0,0,0.6);
+        font-size: 22px;
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="logo">
+        <a href="/">
+          <div class="name">Junghoon Nam</div>
+          <div class="composer">COMPOSER</div>
+        </a>
+      </div>
+
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/works">Works</a>
+        <a href="/events">Events</a>
+        <a href="/archive">Archive</a>
+        <a href="/contact">Contact</a>
+      </nav>
+
+      <div class="sns">
+        <a href="https://www.instagram.com/junghoon.n/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        </a>
+      </div>
+
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+  </body>
 </html>
