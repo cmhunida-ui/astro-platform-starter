@@ -19,31 +19,35 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 30px 60px;
+        padding: 60px 100px 20px 100px; /* 위쪽 더 내림 + 좌우 여백 */
       }
 
       /* 왼쪽 로고 */
+      .logo {
+        margin-left: 20px;
+      }
+
       .logo a {
         text-decoration: none;
         color: white;
       }
 
       .name {
-        font-size: 36px;
+        font-size: 30px; /* 조금 줄임 */
         font-weight: bold;
       }
 
       .composer {
-        font-size: 18px;
-        letter-spacing: 4px;
-        margin-top: 5px;
+        font-size: 16px; /* 조금 줄임 */
+        letter-spacing: 3px;
+        margin-top: 3px;
       }
 
       /* 가운데 메뉴 */
       nav {
         display: flex;
-        gap: 50px;
-        font-size: 20px;
+        gap: 40px;
+        font-size: 18px; /* 조금 줄임 */
       }
 
       nav a {
@@ -56,9 +60,13 @@
       }
 
       /* 오른쪽 SNS */
+      .sns {
+        margin-right: 20px;
+      }
+
       .sns img {
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
       }
 
       /* 가운데 이미지 */
@@ -66,19 +74,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 80vh;
+        height: 75vh;
       }
 
       .center-image img {
-        max-width: 500px;
-        width: 80%;
+        max-width: 800px; /* 🔥 더 크게 */
+        width: 90%;
       }
 
       main {
         max-width: 900px;
         margin: 0 auto;
-        padding: 80px;
-        font-size: 22px;
+        padding: 60px;
+        font-size: 20px;
         line-height: 1.8;
       }
     </style>
@@ -115,7 +123,6 @@
 
     </header>
 
-    <!-- 가운데 배경 이미지처럼 쓰는 영역 -->
     <div class="center-image">
       <img src="/mybackground.jpg">
     </div>
