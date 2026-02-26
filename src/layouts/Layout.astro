@@ -4,7 +4,6 @@
   <head>
     <title>Junghoon Nam</title>
 
-    <!-- 세련된 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -48,14 +47,49 @@
         font-size: 17px;
       }
 
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 40px;
+      }
+
+      nav li {
+        position: relative;
+        text-transform: uppercase;
+      }
+
       nav a {
         text-decoration: none;
         color: white;
-        font-weight: 500; /* 메뉴 글자 조금 더 굵게 */
+        font-weight: 500;
       }
 
       nav a:hover {
         opacity: 0.6;
+      }
+
+      /* About 하위 메뉴 */
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 25px; /* About 메뉴 아래로 위치 */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px 15px;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
+
+      .submenu a {
+        display: block;
+        font-size: 14px;
+        margin: 4px 0;
+      }
+
+      li:hover .submenu {
+        display: block;
       }
 
       /* SNS */
@@ -65,7 +99,7 @@
       }
 
       .sns img {
-        height: 24px; /* 모든 아이콘 크기 통일 */
+        height: 24px;
         width: auto;
         transition: opacity 0.3s ease;
       }
@@ -109,28 +143,33 @@
         </a>
       </div>
 
-      <!-- 메뉴 (Home 삭제) -->
+      <!-- 메뉴 -->
       <nav>
-        <a href="/about">About</a>
-        <a href="/works">Works</a>
-        <a href="/events">Events</a>
-        <a href="/archive">Archive</a>
-        <a href="/contact">Contact</a>
+        <ul>
+          <!-- About 하위 메뉴 -->
+          <li>
+            <a href="/about">ABOUT</a>
+            <div class="submenu">
+              <a href="/about/kr">한글</a>
+              <a href="/about/en">English</a>
+              <a href="/about/de">Deutsch</a>
+            </div>
+          </li>
+          <li><a href="/works">WORKS</a></li>
+          <li><a href="/events">EVENTS</a></li>
+          <li><a href="/archive">ARCHIVE</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
       </nav>
 
-      <!-- 오른쪽 SNS (최신 아이콘, 컬러+명암) -->
+      <!-- SNS -->
       <div class="sns">
-        <!-- Instagram -->
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
-
-        <!-- Facebook -->
         <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
         </a>
-
-        <!-- YouTube -->
         <a href="https://www.youtube.com/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
         </a>
@@ -144,7 +183,6 @@
     </div>
 
     <main>
-      <!-- 각 페이지 콘텐츠 -->
       <slot />
     </main>
 
