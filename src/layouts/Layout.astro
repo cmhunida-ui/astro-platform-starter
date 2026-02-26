@@ -21,7 +21,8 @@
         padding: 60px 120px 20px 120px;
       }
 
-      /* 왼쪽 이름 */
+      /* ===================== */
+      /* 왼쪽 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -39,11 +40,12 @@
         margin-top: 3px;
       }
 
+      /* ===================== */
       /* 메뉴 */
       nav {
         display: flex;
         gap: 40px;
-        margin-left: -50px; /* Home 삭제 후 메뉴 조금 왼쪽 이동 */
+        margin-left: -50px;
         font-size: 17px;
       }
 
@@ -70,29 +72,43 @@
         opacity: 0.6;
       }
 
-      /* About 하위 메뉴 */
+      /* ===================== */
+      /* 🔥 ABOUT 하위 메뉴 개선 */
+
+      .about-wrapper {
+        position: relative;
+        padding-bottom: 15px; /* hover 영역 확장 */
+      }
+
       .submenu {
         display: none;
         position: absolute;
-        top: 25px; /* About 메뉴 아래로 위치 */
+        top: 30px;
         left: 0;
         background-color: rgba(0, 0, 0, 0.9);
-        padding: 10px 15px;
-        border-radius: 4px;
+        padding: 12px 18px;
+        border-radius: 6px;
         white-space: nowrap;
+
+        /* 위아래 간격 추가 */
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
 
       .submenu a {
-        display: block;
         font-size: 14px;
-        margin: 4px 0;
+        font-weight: 400;
       }
 
-      li:hover .submenu {
-        display: block;
+      /* ✅ About + 하위메뉴 전체 영역 hover */
+      .about-wrapper:hover .submenu {
+        display: flex;
       }
 
+      /* ===================== */
       /* SNS */
+
       .sns {
         display: flex;
         gap: 22px;
@@ -108,7 +124,9 @@
         opacity: 0.7;
       }
 
+      /* ===================== */
       /* 가운데 이미지 */
+
       .center-image {
         display: flex;
         justify-content: center;
@@ -146,38 +164,44 @@
       <!-- 메뉴 -->
       <nav>
         <ul>
-          <!-- About 하위 메뉴 -->
-          <li>
+
+          <!-- ABOUT + 하위메뉴 (안전 hover 영역 적용) -->
+          <li class="about-wrapper">
             <a href="/about">ABOUT</a>
+
             <div class="submenu">
               <a href="/about/kr">한글</a>
               <a href="/about/en">English</a>
               <a href="/about/de">Deutsch</a>
             </div>
           </li>
+
           <li><a href="/works">WORKS</a></li>
           <li><a href="/events">EVENTS</a></li>
           <li><a href="/archive">ARCHIVE</a></li>
           <li><a href="/contact">CONTACT</a></li>
+
         </ul>
       </nav>
 
       <!-- SNS -->
       <div class="sns">
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
         </a>
+
         <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png">
         </a>
+
         <a href="https://www.youtube.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png">
         </a>
       </div>
 
     </header>
 
-    <!-- 가운데 배경 이미지 -->
+    <!-- 배경 -->
     <div class="center-image">
       <img src="/mybackground.jpg">
     </div>
