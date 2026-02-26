@@ -45,7 +45,7 @@
         display: flex;
         gap: 40px;
         font-size: 17px;
-        margin-left: -80px; /* 메뉴만 왼쪽으로 이동 */
+        margin-left: -50px; /* Home 삭제 후 메뉴 조금 왼쪽 이동 */
       }
 
       nav a {
@@ -109,9 +109,8 @@
         </a>
       </div>
 
-      <!-- 메뉴 -->
+      <!-- 메뉴 (Home 삭제) -->
       <nav>
-        <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/works">Works</a>
         <a href="/events">Events</a>
@@ -119,24 +118,17 @@
         <a href="/contact">Contact</a>
       </nav>
 
-      <!-- 오른쪽 SNS (모든 아이콘 크기 통일) -->
+      <!-- 오른쪽 SNS -->
       <div class="sns">
-
-        <!-- Instagram -->
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
-
-        <!-- Facebook -->
         <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
         </a>
-
-        <!-- YouTube (글자 없는 아이콘) -->
         <a href="https://www.youtube.com/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
         </a>
-
       </div>
 
     </header>
@@ -147,7 +139,7 @@
     </div>
 
     <main>
-      <!-- 이제 Welcome 텍스트 없음, 각 페이지 내용만 slot으로 나옴 -->
+      <!-- 각 페이지 콘텐츠 -->
       <slot />
     </main>
 
