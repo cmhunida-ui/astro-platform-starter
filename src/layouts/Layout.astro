@@ -6,8 +6,7 @@
   <head>
     <title>Junghoon Nam</title>
 
-    <!-- 세련된 폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
       body {
@@ -24,7 +23,6 @@
         padding: 60px 120px 20px 120px;
       }
 
-      /* 왼쪽 이름 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -47,13 +45,13 @@
         display: flex;
         gap: 40px;
         font-size: 17px;
-        margin-left: -80px; /* 🔥 메뉴만 왼쪽으로 이동 */
+        margin-left: -80px;
       }
 
       nav a {
         text-decoration: none;
         color: white;
-        font-weight: 300;
+        font-weight: 500; /* 🔥 살짝 더 굵게 */
       }
 
       nav a:hover {
@@ -66,10 +64,15 @@
         gap: 20px;
       }
 
-      .sns img {
-        width: 24px;
-        height: 24px;
-        filter: brightness(0) invert(1); /* 🔥 흰색으로 변환 */
+      .sns svg {
+        width: 22px;
+        height: 22px;
+        fill: white; /* 🔥 흑백 느낌 유지 */
+        opacity: 0.9;
+      }
+
+      .sns svg:hover {
+        opacity: 0.6;
       }
 
       .center-image {
@@ -106,7 +109,7 @@
         </a>
       </div>
 
-      <!-- 가운데 메뉴 -->
+      <!-- 메뉴 -->
       <nav>
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -116,19 +119,30 @@
         <a href="/contact">Contact</a>
       </nav>
 
-      <!-- 오른쪽 SNS -->
+      <!-- SNS 흑백 아이콘 -->
       <div class="sns">
+
+        <!-- Instagram -->
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8zm6-2a1 1 0 110 2 1 1 0 010-2z"/>
+          </svg>
         </a>
 
+        <!-- Facebook -->
         <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/>
+          </svg>
         </a>
 
+        <!-- YouTube -->
         <a href="https://www.youtube.com/" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+          <svg viewBox="0 0 24 24">
+            <path d="M23 12s0-3-1-4-3-1-3-1H5s-2 0-3 1-1 4-1 4 0 3 1 4 3 1 3 1h14s2 0 3-1 1-4 1-4zM10 15V9l5 3-5 3z"/>
+          </svg>
         </a>
+
       </div>
 
     </header>
