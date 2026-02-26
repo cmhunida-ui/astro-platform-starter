@@ -1,16 +1,58 @@
 ---
-import Layout from '../layouts/Layout.astro';
+
 ---
 
-<Layout title="Junghoon Portfolio">
-  <div style="text-align:center; padding:80px;">
-    <h1>Nam Junghoon</h1>
-    <p>Welcome to my portfolio website.</p>
-    
-    <p style="margin-top:30px;">
-      <a href="https://youtube.com/" target="_blank">
-        Visit My YouTube Channel
-      </a>
-    </p>
-  </div>
-</Layout>
+<html>
+  <head>
+    <title>Junghoon Nam</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background-color: black;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: gray;
+      }
+
+      .hero {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">WORK</a>
+      <a href="#">CONTACT</a>
+    </nav>
+
+    <div class="hero">
+      JUN GHOON NAM
+    </div>
+  </body>
+</html>
