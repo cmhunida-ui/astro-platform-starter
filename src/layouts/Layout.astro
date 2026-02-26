@@ -10,28 +10,19 @@
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-
-        /* 🔥 당신이 올린 배경 이미지 */
-        background-image: url("/mybackground.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-
+        background-color: black;
         color: white;
       }
 
+      /* 상단 바 */
       header {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        padding-top: 60px;
+        padding: 30px 60px;
       }
 
-      .logo {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-
+      /* 왼쪽 로고 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -48,11 +39,11 @@
         margin-top: 5px;
       }
 
+      /* 가운데 메뉴 */
       nav {
         display: flex;
         gap: 50px;
         font-size: 20px;
-        margin-bottom: 30px;
       }
 
       nav a {
@@ -64,20 +55,29 @@
         opacity: 0.6;
       }
 
-      .sns {
-        margin-bottom: 50px;
-      }
-
+      /* 오른쪽 SNS */
       .sns img {
         width: 28px;
         height: 28px;
+      }
+
+      /* 가운데 이미지 */
+      .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+
+      .center-image img {
+        max-width: 500px;
+        width: 80%;
       }
 
       main {
         max-width: 900px;
         margin: 0 auto;
         padding: 80px;
-        background: rgba(0,0,0,0.6);
         font-size: 22px;
         line-height: 1.8;
       }
@@ -88,6 +88,7 @@
 
     <header>
 
+      <!-- 왼쪽 -->
       <div class="logo">
         <a href="/">
           <div class="name">Junghoon Nam</div>
@@ -95,6 +96,7 @@
         </a>
       </div>
 
+      <!-- 가운데 -->
       <nav>
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -104,6 +106,7 @@
         <a href="/contact">Contact</a>
       </nav>
 
+      <!-- 오른쪽 -->
       <div class="sns">
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
@@ -111,6 +114,11 @@
       </div>
 
     </header>
+
+    <!-- 가운데 배경 이미지처럼 쓰는 영역 -->
+    <div class="center-image">
+      <img src="/mybackground.jpg">
+    </div>
 
     <main>
       <slot />
