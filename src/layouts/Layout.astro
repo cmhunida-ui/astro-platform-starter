@@ -1,11 +1,10 @@
 ---
-
 ---
-
 <html>
   <head>
     <title>Junghoon Nam</title>
 
+    <!-- 세련된 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -23,6 +22,7 @@
         padding: 60px 120px 20px 120px;
       }
 
+      /* 왼쪽 이름 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -45,13 +45,13 @@
         display: flex;
         gap: 40px;
         font-size: 17px;
-        margin-left: -80px;
+        margin-left: -80px; /* 메뉴만 왼쪽으로 이동 */
       }
 
       nav a {
         text-decoration: none;
         color: white;
-        font-weight: 500; /* 🔥 살짝 더 굵게 */
+        font-weight: 500; /* 메뉴 글자 조금 더 굵게 */
       }
 
       nav a:hover {
@@ -61,20 +61,20 @@
       /* SNS */
       .sns {
         display: flex;
-        gap: 20px;
+        gap: 22px;
       }
 
-      .sns svg {
-        width: 22px;
-        height: 22px;
-        fill: white; /* 🔥 흑백 느낌 유지 */
-        opacity: 0.9;
+      .sns img {
+        height: 24px;
+        width: auto;
+        transition: opacity 0.3s ease;
       }
 
-      .sns svg:hover {
-        opacity: 0.6;
+      .sns img:hover {
+        opacity: 0.7;
       }
 
+      /* 가운데 이미지 */
       .center-image {
         display: flex;
         justify-content: center;
@@ -119,33 +119,28 @@
         <a href="/contact">Contact</a>
       </nav>
 
-      <!-- SNS 흑백 아이콘 -->
+      <!-- 오른쪽 SNS -->
       <div class="sns">
-
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/junghoon.n/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-  </a>
-
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-  </a>
-
-  <!-- YouTube -->
-  <a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-  </a>
-
-</div>
+        <a href="https://www.instagram.com/junghoon.n/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+        </a>
+      </div>
 
     </header>
 
+    <!-- 가운데 배경 이미지 -->
     <div class="center-image">
       <img src="/mybackground.jpg">
     </div>
 
     <main>
+      <!-- 여기에 각 페이지 내용(slot)만 나오도록 -->
       <slot />
     </main>
 
