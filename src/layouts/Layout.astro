@@ -65,7 +65,7 @@
       }
 
       .sns img {
-        height: 24px;
+        height: 24px; /* 모든 아이콘 크기 통일 */
         width: auto;
         transition: opacity 0.3s ease;
       }
@@ -119,17 +119,24 @@
         <a href="/contact">Contact</a>
       </nav>
 
-      <!-- 오른쪽 SNS -->
+      <!-- 오른쪽 SNS (모든 아이콘 크기 통일) -->
       <div class="sns">
+
+        <!-- Instagram -->
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
+
+        <!-- Facebook -->
         <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
         </a>
+
+        <!-- YouTube (글자 없는 아이콘) -->
         <a href="https://www.youtube.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
         </a>
+
       </div>
 
     </header>
@@ -140,7 +147,7 @@
     </div>
 
     <main>
-      <!-- 여기에 각 페이지 내용(slot)만 나오도록 -->
+      <!-- 이제 Welcome 텍스트 없음, 각 페이지 내용만 slot으로 나옴 -->
       <slot />
     </main>
 
