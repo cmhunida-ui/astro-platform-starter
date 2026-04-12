@@ -1,39 +1,143 @@
 ---
-import Layout from '../layouts/Layout.astro';
+const { title } = Astro.props;
 ---
+<html>
+  <head>
+    <title>{title}</title>
 
-<Layout title="About">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-<div class="about-page">
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        color: white;
+        font-family: 'Inter', sans-serif;
+      }
 
-  <div class="about-left">
-    <p>
-      작곡가 남정훈은 한국을 기반으로 활동하며, 음색과 질감, 그리고 음악적 제스처의 관계를 탐구해왔다. 그의 음악은 주제 전개 중심의 방식보다는 미세한 음향 변화와 텍스처의 이동을 통해 형식을 형성하는 데 관심을 둔다. 특히 음과 소음, 나타남과 사라짐 사이의 경계에 주목하며, 소리를 고정된 대상이 아닌 시간 속에서 변화하는 현상으로 다루고자 한다. 그는 계명대학교에서 작곡을 전공하고 학사 학위를 취득하였으며, 이후 뮌헨 국립음대(Hochschule für Musik und Theater München)에서 석사 및 마이스터클라세 과정을 졸업하였다. 그의 작품은 한국, 일본, 핀란드, 루마니아, 폴란드, 독일 등 여러 국가에서 연주되었으며, 동아시아국제현대음악제, 영남국제현대음악제, 대구국제현대음악제, 한일창작교류가곡제, George Enescu Festival, ADEvantgarde Festival, Weimarer Frühjahrstage für zeitgenössische Musik, Eisenach Bach Festival, Kraków International Festival of Composers 등 다양한 국제 음악제에서 소개되었다. 그의 작품은 Ensemble TIMF, Ensemble Eins, Ensemble Handwerk, QUASARS Ensemble, Thüringer Symphoniker Saalfeld-Rudolstadt, Thüringen Philharmonie Eisenach-Gotha 등에서 연주되었으며, 바이올린 독주곡 풍류(Taste for the Arts)는 2015년 시벨리우스 국제 바이올린 콩쿠르 준결승 과제곡으로 선정되어 핀란드 공영방송을 통해 연주되었다. 그는 국내외 다수의 작곡 콩쿠르에서 수상하였다. 환경부 주최 전국환경노래작곡경연대회 동상(2010)을 시작으로, 영남작곡콩쿠르 1위(2013), 향신회작곡콩쿠르 1위(2014), 중앙음악콩쿠르 2위(1위 없음, 2015), 동아음악콩쿠르 3위(2015), 대구오페라하우스 창작가곡제 우수상(2015) 등을 수상하였다. 이후 국제 무대에서 Jean Sibelius 국제 작곡 콩쿠르 3위(2015), George Enescu 국제 콩쿠르 작곡부문 1위(2018), Weimarer Frühjahrstage 국제 작곡 콩쿠르 2위(1위 없음, 2020), Krzysztof Penderecki 국제 작곡 콩쿠르 1위(2023)를 수상하며 활동을 이어왔다. 또한 2023년 한국작곡가협회 주관 ‘파안 생명나무 작곡가’로 선정되었으며, 독일 Eisenach시 주관 바흐 국제 작곡상을 수상하였다. 현재 그는 한국을 중심으로 활발히 작품 활동을 이어가고 있으며, 계명대학교와 경북대학교에서 작곡과 음악 이론을 강의하고 있다.
-    </p>
-  </div>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 120px 20px 120px;
+      }
 
-  <div class="about-right">
-    <p>
-      Jung Hoon Nam is a composer based in South Korea whose work explores the relationship between timbre, texture, and musical gesture. Rather than focusing on thematic development or harmonic progression, his music is shaped by subtle sonic changes and evolving textures. He is particularly interested in the threshold between sound and noise, presence and disappearance, treating sound as a phenomenon that unfolds over time rather than as a fixed object. He studied composition at Keimyung University, where he received his Bachelor of Music degree, and later continued his studies at the Hochschule für Musik und Theater München, where he completed both his Master’s degree and Meisterklasse. His works have been performed internationally in South Korea, Japan, Finland, Romania, Poland, and Germany, and have been presented at festivals such as the East Asia International Contemporary Music Festival, Youngnam International Contemporary Music Festival, Daegu International Contemporary Music Festival, Korea-Japan Art Song Festival, George Enescu Festival, ADEvantgarde Festival, Weimarer Frühjahrstage für zeitgenössische Musik, Eisenach Bach Festival, and Kraków International Festival of Composers. His music has been performed by Ensemble TIMF, Ensemble Eins, Ensemble Handwerk, QUASARS Ensemble, Thüringer Symphoniker Saalfeld-Rudolstadt, and Thüringen Philharmonie Eisenach-Gotha. His violin solo work Taste for the Arts was selected as a semi-final piece for the International Jean Sibelius Violin Competition in 2015 and was broadcast by Finnish national radio. He has received numerous prizes in national and international composition competitions, including the International Jean Sibelius Composition Competition (3rd Prize, 2015), the George Enescu International Composition Competition (1st Prize, 2018), the Weimarer Frühjahrstage Composition Competition (2nd Prize, 2020, no first prize awarded), and the Krzysztof Penderecki International Competition for Young Composers (1st Prize, 2023). In addition, he was selected for the “PAAN Tree of Life” composer support project by the Korean Composers Association in 2023 and received the International Eisenach Bach Composition Prize. He is currently active as a composer and educator in South Korea and teaches composition and music theory at Keimyung University and Kyungbook National University.
-    </p>
-  </div>
+      .logo a {
+        text-decoration: none;
+        color: white;
+      }
 
-</div>
+      .name {
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        font-weight: 700;
+      }
 
-<style>
-  .about-page {
-    display: flex;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 100px auto;
-  }
+      .composer {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-top: 3px;
+      }
 
-  .about-left, .about-right {
-    flex: 1;
-    font-size: 17px;
-    line-height: 1.9;
-    color: #ddd;
-  }
-</style>
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+      }
 
-</Layout>
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      nav a:hover {
+        opacity: 0.6;
+      }
+
+      .sns {
+        display: flex;
+        gap: 22px;
+      }
+
+      .sns img {
+        height: 24px;
+      }
+
+      .sns img:hover {
+        opacity: 0.7;
+      }
+
+      /* 홈에서만 보이는 이미지 */
+      .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+      }
+
+      .center-image img {
+        max-width: 850px;
+        width: 90%;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="logo">
+        <a href="/">
+          <div class="name">Junghoon Nam</div>
+          <div class="composer">COMPOSER</div>
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/works">WORKS</a></li>
+          <li><a href="/events">EVENTS</a></li>
+          <li><a href="/archive">ARCHIVE</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="sns">
+        <a href="https://www.instagram.com/junghoon.n/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+        </a>
+
+        <a href="https://www.facebook.com/junghoon.nam.39" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png">
+        </a>
+
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png">
+        </a>
+      </div>
+
+    </header>
+
+    <!-- 🔥 홈에서만 이미지 -->
+    {title === "Home" && (
+      <div class="center-image">
+        <img src="/mybackground.jpg">
+      </div>
+    )}
+
+    <main>
+      <slot />
+    </main>
+
+  </body>
+</html>
