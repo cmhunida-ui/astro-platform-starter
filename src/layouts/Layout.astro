@@ -56,7 +56,6 @@
       }
 
       nav li {
-        position: relative;
         text-transform: uppercase;
       }
 
@@ -68,39 +67,6 @@
 
       nav a:hover {
         opacity: 0.6;
-      }
-
-      /* 🔥 핵심 수정 */
-      .about-wrapper {
-        position: relative;
-        padding-bottom: 20px; /* 👈 invisible 영역 */
-      }
-
-      .submenu {
-        position: absolute;
-        top: 100%; /* 👈 바로 아래 붙임 */
-        left: 0;
-
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        opacity: 0;
-        visibility: hidden;
-
-        padding-top: 10px;
-
-        transition: 0.2s ease;
-      }
-
-      .submenu a {
-        font-size: 14px;
-        font-weight: 400;
-      }
-
-      .about-wrapper:hover .submenu {
-        opacity: 1;
-        visibility: visible;
       }
 
       /* SNS */
@@ -161,6 +127,7 @@
 
     <header>
 
+      <!-- 로고 -->
       <div class="logo">
         <a href="/">
           <div class="name">Junghoon Nam</div>
@@ -168,27 +135,18 @@
         </a>
       </div>
 
+      <!-- 메뉴 (하위메뉴 완전 제거됨) -->
       <nav>
         <ul>
-
-          <li class="about-wrapper">
-            <a href="/about">ABOUT</a>
-
-            <div class="submenu">
-              <a href="/about/kr">한글</a>
-              <a href="/about/en">English</a>
-              <a href="/about/de">Deutsch</a>
-            </div>
-          </li>
-
+          <li><a href="/about">ABOUT</a></li>
           <li><a href="/works">WORKS</a></li>
           <li><a href="/events">EVENTS</a></li>
           <li><a href="/archive">ARCHIVE</a></li>
           <li><a href="/contact">CONTACT</a></li>
-
         </ul>
       </nav>
 
+      <!-- SNS -->
       <div class="sns">
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
