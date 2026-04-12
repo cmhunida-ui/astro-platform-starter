@@ -1,1 +1,88 @@
 
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Events">
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+    color: #ddd;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .event {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 70px;
+    align-items: flex-start;
+  }
+
+  .event img {
+    width: 200px;
+    height: auto;
+  }
+
+  .info {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .date {
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .event {
+      flex-direction: column;
+    }
+
+    .event img {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="container">
+
+  <h1>EVENTS</h1>
+
+  <!-- 🔥 최신 (2.png) -->
+  <div class="event">
+    <img src="/2.png" />
+
+    <div class="info">
+      <div class="title">»Distorsion« für Orchester</div>
+      <div class="date">09/09/2020</div>
+      <div>Germany / Weimarhalle</div>
+      <div>Thüringer Symphoniker Saalfeld-Rudolstadt / Conductor : Oliver Weder</div>
+    </div>
+  </div>
+
+  <!-- 🔥 이전 (1.png) -->
+  <div class="event">
+    <img src="/1.png" />
+
+    <div class="info">
+      <div class="title">»Niemand ist da« für zwei Schlagzeuger</div>
+      <div class="date">03/21/2017</div>
+      <div>Germany / Junge Solisten gespräch Konzert in Gasteig in München</div>
+      <div>Percussion I : Godwin Schmid / Percussion II : Patrick Stapelton</div>
+    </div>
+  </div>
+
+</div>
+
+</Layout>
