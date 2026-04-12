@@ -1,8 +1,10 @@
 ---
+const { title } = Astro.props;
 ---
+
 <html>
   <head>
-    <title>Junghoon Nam</title>
+    <title>{title}</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -21,7 +23,6 @@
         padding: 60px 120px 20px 120px;
       }
 
-      /* 로고 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -39,86 +40,38 @@
         margin-top: 3px;
       }
 
-      /* 메뉴 */
-      nav {
-        display: flex;
-        gap: 40px;
-        margin-left: -50px;
-        font-size: 17px;
-      }
-
       nav ul {
         list-style: none;
         display: flex;
         gap: 40px;
         margin: 0;
         padding: 0;
-      }
-
-      nav li {
         text-transform: uppercase;
       }
 
       nav a {
         text-decoration: none;
         color: white;
-        font-weight: 500;
+        font-weight: 600;
       }
 
       nav a:hover {
         opacity: 0.6;
       }
 
-      /* SNS */
       .sns {
         display: flex;
-        gap: 22px;
+        gap: 20px;
       }
 
       .sns img {
-        height: 24px;
-      }
-
-      .sns img:hover {
-        opacity: 0.7;
-      }
-
-      /* 배경 */
-      .center-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 75vh;
-      }
-
-      .center-image img {
-        max-width: 850px;
-        width: 90%;
-      }
-
-      /* 프로필 */
-      .profile-container {
-        display: flex;
-        gap: 60px;
-        max-width: 1000px;
-        margin: 80px auto;
-        align-items: flex-start;
-      }
-
-      .profile-image img {
-        width: 300px;
-      }
-
-      .profile-text {
-        flex: 1;
-        font-size: 17px;
-        line-height: 1.9;
-        color: #ddd;
+        height: 22px;
       }
 
       main {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 40px 20px;
       }
     </style>
   </head>
@@ -135,7 +88,7 @@
         </a>
       </div>
 
-      <!-- 메뉴 (하위메뉴 완전 제거됨) -->
+      <!-- 메뉴 -->
       <nav>
         <ul>
           <li><a href="/about">ABOUT</a></li>
@@ -163,10 +116,7 @@
 
     </header>
 
-    <div class="center-image">
-      <img src="/mybackground.jpg">
-    </div>
-
+    <!-- 🔥 핵심: 이미지 완전 삭제됨 -->
     <main>
       <slot />
     </main>
