@@ -21,7 +21,7 @@
         padding: 60px 120px 20px 120px;
       }
 
-      /* ===== 왼쪽 ===== */
+      /* 왼쪽 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -39,7 +39,7 @@
         margin-top: 3px;
       }
 
-      /* ===== 메뉴 ===== */
+      /* 메뉴 */
       nav {
         display: flex;
         gap: 40px;
@@ -70,21 +70,20 @@
         opacity: 0.6;
       }
 
-      /* ===== ABOUT 하위 메뉴 (수정 완료) ===== */
-
-      .about-wrapper {
-        position: relative;
-      }
-
+      /* 🔥 하위 메뉴 (완전 안정화 버전) */
       .submenu {
         position: absolute;
         top: 30px;
-        left: 0; /* 🔥 상위 메뉴 왼쪽 정렬 */
-        display: none; /* 🔥 처음에는 안 보이게 */
+        left: 0;
+
+        display: flex;
         flex-direction: column;
-        gap: 15px; /* 🔥 위아래 간격 더 넓게 */
-        padding-top: 15px;
-        white-space: nowrap;
+        gap: 15px;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 0.2s ease;
       }
 
       .submenu a {
@@ -92,13 +91,13 @@
         font-weight: 400;
       }
 
-      /* 🔥 마우스 올렸을 때만 보이기 */
+      /* 🔥 hover 시 나타남 */
       .about-wrapper:hover .submenu {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
 
-      /* ===== SNS ===== */
-
+      /* SNS */
       .sns {
         display: flex;
         gap: 22px;
@@ -106,16 +105,13 @@
 
       .sns img {
         height: 24px;
-        width: auto;
-        transition: opacity 0.3s ease;
       }
 
       .sns img:hover {
         opacity: 0.7;
       }
 
-      /* ===== 배경 ===== */
-
+      /* 배경 */
       .center-image {
         display: flex;
         justify-content: center;
@@ -132,8 +128,6 @@
         max-width: 900px;
         margin: 0 auto;
         padding: 60px;
-        font-size: 20px;
-        line-height: 1.8;
       }
     </style>
   </head>
@@ -142,7 +136,6 @@
 
     <header>
 
-      <!-- 왼쪽 -->
       <div class="logo">
         <a href="/">
           <div class="name">Junghoon Nam</div>
@@ -150,11 +143,9 @@
         </a>
       </div>
 
-      <!-- 메뉴 -->
       <nav>
         <ul>
 
-          <!-- ABOUT + 하위메뉴 -->
           <li class="about-wrapper">
             <a href="/about">ABOUT</a>
 
@@ -173,7 +164,6 @@
         </ul>
       </nav>
 
-      <!-- SNS -->
       <div class="sns">
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
@@ -190,7 +180,6 @@
 
     </header>
 
-    <!-- 배경 -->
     <div class="center-image">
       <img src="/mybackground.jpg">
     </div>
