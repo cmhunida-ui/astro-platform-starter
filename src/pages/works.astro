@@ -4,84 +4,154 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Works">
 
-<div style="max-width:900px; margin:80px auto; color:#ddd;">
+<style>
+  .container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    color: #ddd;
+  }
 
-  <h1 style="font-size:28px; margin-bottom:50px;">WORKS</h1>
+  h1 {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
 
-  <div style="font-size:16px; line-height:2.1;">
+  .year {
+    margin-bottom: 40px;
+  }
 
-    <p><strong>2025</strong><br>
-    “I am all ears” for Orchestra (ca. 7 min.)<br>
-    “When the Wind Blows Softly and the Waves are Still” for String Quartet (ca. 7 min.)<br>
-    “Hidpulse” for Two Pianos (ca. 8 min.)<br>
-    “Bright Abyss” for Five Players (ca. 8 min.)<br>
-    “Yeon” for Piano Solo<br>
-    “Song of You” for Choir (ca. 5 min.)</p>
+  .year-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 
-    <p><strong>2024</strong><br>
-    “As if Whistling” for Solo Cello<br>
-    “Ecto” for Solo Violin<br>
-    “Scattering and Gathering” for Piano Quintet (ca. 6 min.)</p>
+  .works {
+    line-height: 2;
+    font-size: 16px;
+  }
 
-    <p><strong>2023</strong><br>
-    “Earnendel” for 7 Players (ca. 8 min.)<br>
-    “Rauschen ver. II” for Flute, Piano, and Cello (ca. 7 min.)<br>
-    “Woher und wohin II” for Violin and Piano (ca. 7 min.)<br>
-    “Sikim” for Baritone, Cello, and Piano (ca. 9 min.)<br>
-    “I Slice the Rice Cake, You Write the Text” for Violin, Alto Flute, Bass Clarinet, and Percussion (ca. 20 min.)<br>
-    “Kollektiver Monolog” for Orchestra (ca. 11 min.)</p>
+  @media (max-width: 768px) {
+    .container {
+      margin: 40px auto;
+    }
 
-    <p><strong>2022</strong><br>
-    “Melos” for Flute, Clarinet in Bb, Piano, Violin, and Cello (ca. 12 min.)<br>
-    “Circling Back: Ganggangsullae” for Haegeum and Organ (ca. 7 min.)<br>
-    “Not Nothing Special” for Clarinet in Bb, Percussion, Piano, and Cello (ca. 9 min.)</p>
+    h1 {
+      font-size: 22px;
+    }
 
-    <p><strong>2021</strong><br>
-    “MacGuffin Effect” for Piano Solo (ca. 10 min.)</p>
+    .works {
+      font-size: 14px;
+    }
+  }
+</style>
 
-    <p><strong>2020</strong><br>
-    “Dodecagonal Design” for String Quartet (ca. 9 min.)<br>
-    “Distortion in the Mirror” for Percussion, Accordion, and Piano (ca. 9 min.)<br>
-    “Rubato” for Solo Flute (ca. 7 min.)</p>
+<div class="container">
 
-    <p><strong>2019</strong><br>
-    “I See Your Melody” for Clarinet, Percussion, Harp, Piano, and Cello (ca. 9 min.)<br>
-    “Distorsion” for Orchestra (ca. 12 min.)<br>
-    “No One Should Claim” for Soprano and Ensemble (ca. 13 min.)<br>
-    “Where From and Where To” for Solo Violin (ca. 7 min.)</p>
+  <h1>WORKS</h1>
 
-    <p><strong>2018</strong><br>
-    “Two or One” for Two Cellos (ca. 12 min.)<br>
-    “Scattering” for String Quartet<br>
-    “Rauschen” for Oboe, Piano, and Cello (ca. 8 min.)</p>
+  <div class="works">
 
-    <p><strong>2017</strong><br>
-    “No One Is There” for Two Percussionists (ca. 9 min.)<br>
-    “Density” for String Quartet (ca. 15 min.)<br>
-    “Five Small Pieces (Supports)” for Piano Solo (ca. 8 min.)</p>
+    <div class="year">
+      <div class="year-title">2025</div>
+      »I am all ears« for Orchestra (ca. 7 min.)<br>
+      »When the Wind Blows Softly and the Waves are Still« for String Quartet (ca. 7 min.)<br>
+      »Hidpulse« for Two Pianos (ca. 8 min.)<br>
+      5명의 연주자를 위한 »밝은심연« (ca. 8 min.)<br>
+      »Yeon« for Piano Solo<br>
+      합창을 위한 »님의 노래« (ca. 5 min.)
+    </div>
 
-    <p><strong>2016</strong><br>
-    “Hap” for Orchestra (ca. 12 min.)</p>
+    <div class="year">
+      <div class="year-title">2024</div>
+      첼로 솔로를 위한 »휘파람 불듯이«<br>
+      »Ecto« for Violin solo<br>
+      피아노 오중주를 위한 »흩어지다 모이다« (ca. 6 min.)
+    </div>
 
-    <p><strong>2015</strong><br>
-    “The Interpretation of Dreams” for Violin and Piano (ca. 9 min.)<br>
-    “Unum De Variatione” for Flute, Cello, and Piano (ca. 11 min.)<br>
-    “KangKangsullae” for Clarinet in Bb and String Quartet (ca. 10 min.)<br>
-    “Majung” for Soprano and Orchestra (ca. 5 min.)<br>
-    “Majung” for Soprano and Piano (ca. 5 min.)</p>
+    <div class="year">
+      <div class="year-title">2023</div>
+      »Earnendel« for 7 Players (ca. 8 min.)<br>
+      »Rauschen ver. II« for Flute, Piano and Cello (ca. 7 min.)<br>
+      »Woher und wohin II« for Violin and Piano (ca. 7 min.)<br>
+      바리톤, 첼로, 피아노를 위한 »시김« (ca. 9 min.)<br>
+      바이올린, 알토 플루트, 베이스 클라리넷, 타악기를 위한 »나는 떡을 썰테니 너를 글을 쓰거라« (ca. 20 min.)<br>
+      »Kollektiver Monolog« for Orchestra (ca. 11 min.)
+    </div>
 
-    <p><strong>2014</strong><br>
-    “Kyrie” for 8 Voices (ca. 20 min.)<br>
-    “Taste for the Arts” for Solo Violin (ca. 9 min.)</p>
+    <div class="year">
+      <div class="year-title">2022</div>
+      »Melos« for Flute, Clarinet in Bb, Piano, Violin and Cello (ca. 12 min.)<br>
+      해금과 오르간을 위한 »돌고돌아 강강술래« (ca. 7 min.)<br>
+      »Nicht nichts Besonderes« for Clarinet in B, Percussion, Piano and Cello (ca. 9 min.)
+    </div>
 
-    <p><strong>2013</strong><br>
-    “Karman Rhapsody” for Violin and Piano (ca. 11 min.)<br>
-    “Meditation for Picasso’s Massacre in Korea” for Flute, Viola, and Double Bass (ca. 9 min.)<br>
-    “Pumpkin Time” for Piano Solo (ca. 9 min.)</p>
+    <div class="year">
+      <div class="year-title">2021</div>
+      »MacGuffin effect« for Piano solo (ca. 10 min.)
+    </div>
 
-    <p><strong>2011</strong><br>
-    “Number” for String Quartet (ca. 14 min.)<br>
-    “Let Us All Become One” for Mixed Choir (ca. 3 min.)</p>
+    <div class="year">
+      <div class="year-title">2020</div>
+      »Dodecagonal design« for String Quartet (ca. 9 min.)<br>
+      »Verzerrung im Spiegel« for Percussion, Accordion and Piano (ca. 9 min.)<br>
+      »Rubato« for Flute solo (ca. 7 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2019</div>
+      »I see your melody« for Clarinet, Percussion, Harp, Piano and Cello (ca. 9 min.)<br>
+      »Distorsion« for Orchestra (ca. 12 min.)<br>
+      »Niemand behaupte« for Soprano and Ensemble (ca. 13 min.)<br>
+      »Woher und wohin« for Violin solo (ca. 7 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2018</div>
+      »Zwei oder eins« for Two Cellos (ca. 12 min.)<br>
+      »Scattering« for String Quartet<br>
+      »Rauschen« for Oboe, Piano and Cello (ca. 8 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2017</div>
+      »Niemand ist da« for Two Percussionists (ca. 9 min.)<br>
+      »Dichte« for String Quartet (ca. 15 min.)<br>
+      »Fünf kleine Stücke (Stützen)« for Piano solo (ca. 8 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2016</div>
+      »Hap« for Orchestra (ca. 12 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2015</div>
+      »Die Traumdeutung« for Violin and Piano (ca. 9 min.)<br>
+      »Unum De Variatione« for Flute, Cello and Piano (ca. 11 min.)<br>
+      »KangKangsulle« for Clarinet in Bb and String Quartet (ca. 10 min.)<br>
+      소프라노와 오케스트라를 위한 »마중« (ca. 5 min.)<br>
+      소프라노와 피아노를 위한 »마중« (ca. 5 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2014</div>
+      »Kyrie« for 8 Voices (ca. 20 min.)<br>
+      »Taste for the Arts« for Violin solo (ca. 9 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2013</div>
+      »Karman Rhapsody« for Violin and Piano (ca. 11 min.)<br>
+      »Meditation for Picasso’s Massacre en Coree« for Flute, Viola and Double Bass (ca. 9 min.)<br>
+      »Pumpkin Time« for Piano solo (ca. 9 min.)
+    </div>
+
+    <div class="year">
+      <div class="year-title">2011</div>
+      »Number« for String Quartet (ca. 14 min.)<br>
+      4성부합창을 위한 »우리 모두 하나되자« (ca. 3 min.)
+    </div>
 
   </div>
 
