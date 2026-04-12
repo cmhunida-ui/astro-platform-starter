@@ -21,7 +21,7 @@
         padding: 60px 120px 20px 120px;
       }
 
-      /* 왼쪽 */
+      /* 로고 */
       .logo a {
         text-decoration: none;
         color: white;
@@ -70,10 +70,15 @@
         opacity: 0.6;
       }
 
-      /* 🔥 하위 메뉴 (완전 안정화 버전) */
+      /* 🔥 핵심 수정 */
+      .about-wrapper {
+        position: relative;
+        padding-bottom: 20px; /* 👈 invisible 영역 */
+      }
+
       .submenu {
         position: absolute;
-        top: 30px;
+        top: 100%; /* 👈 바로 아래 붙임 */
         left: 0;
 
         display: flex;
@@ -83,6 +88,8 @@
         opacity: 0;
         visibility: hidden;
 
+        padding-top: 10px;
+
         transition: 0.2s ease;
       }
 
@@ -91,7 +98,6 @@
         font-weight: 400;
       }
 
-      /* 🔥 hover 시 나타남 */
       .about-wrapper:hover .submenu {
         opacity: 1;
         visibility: visible;
@@ -124,10 +130,29 @@
         width: 90%;
       }
 
+      /* 프로필 */
+      .profile-container {
+        display: flex;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 80px auto;
+        align-items: flex-start;
+      }
+
+      .profile-image img {
+        width: 300px;
+      }
+
+      .profile-text {
+        flex: 1;
+        font-size: 17px;
+        line-height: 1.9;
+        color: #ddd;
+      }
+
       main {
-        max-width: 900px;
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 60px;
       }
     </style>
   </head>
