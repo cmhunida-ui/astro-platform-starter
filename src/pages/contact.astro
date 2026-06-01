@@ -6,48 +6,41 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .contact-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 80px auto;
     padding: 0 20px;
   }
 
   .contact-title {
     font-size: 36px;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+  }
+
+  .contact-item {
     margin-bottom: 40px;
   }
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .contact-label {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    background: #111;
-    border: 1px solid #333;
+  .contact-value {
+    font-size: 22px;
+    line-height: 1.8;
+  }
+
+  .contact-value a {
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    font-family: inherit;
+    text-decoration: none;
   }
 
-  .contact-form textarea {
-    min-height: 250px;
-    resize: vertical;
-  }
-
-  .contact-form button {
-    background: white;
-    color: black;
-    border: none;
-    padding: 16px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .contact-form button:hover {
-    opacity: 0.8;
+  .contact-value a:hover {
+    opacity: 0.7;
   }
 </style>
 
@@ -55,38 +48,23 @@ import Layout from '../layouts/Layout.astro';
 
   <h1 class="contact-title">CONTACT</h1>
 
-  <form
-    class="contact-form"
-    action="mailto:cmhunida@gmail.com"
-    method="post"
-    enctype="text/plain"
-  >
+  <div class="contact-item">
+    <div class="contact-label">E-mail</div>
+    <div class="contact-value">
+      <a href="mailto:cmhunida@gmail.com">
+        cmhunida@gmail.com
+      </a>
+    </div>
+  </div>
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Name"
-      required
-    />
-
-    <input
-      type="email"
-      name="email"
-      placeholder="Email"
-      required
-    />
-
-    <textarea
-      name="message"
-      placeholder="Message"
-      required
-    ></textarea>
-
-    <button type="submit">
-      Send Message
-    </button>
-
-  </form>
+  <div class="contact-item">
+    <div class="contact-label">Instagram</div>
+    <div class="contact-value">
+      <a href="https://www.instagram.com/junghoon.n/" target="_blank">
+        @junghoon.n
+      </a>
+    </div>
+  </div>
 
 </div>
 
