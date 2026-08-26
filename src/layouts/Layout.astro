@@ -73,23 +73,6 @@ const { title } = Astro.props;
         margin: 0 auto;
         padding: 40px 20px;
       }
-
-      /* 홈 배경 이미지 */
-      .home-background {
-        width: 100%;
-        height: 75vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-
-      .home-background img {
-        max-width: 850px;
-        width: 90%;
-        height: auto;
-        display: block;
-      }
     </style>
   </head>
 
@@ -132,11 +115,7 @@ const { title } = Astro.props;
 
     </header>
 
-    <!-- 홈 배경 이미지 -->
-    <div class="home-background">
-      <img src="/mybackground.jpg" alt="Background">
-    </div>
-
+    <!-- 🔥 핵심: 이미지 완전 삭제됨 -->
     <main>
       <slot />
     </main>
