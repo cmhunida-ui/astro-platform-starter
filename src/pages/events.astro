@@ -1,142 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const events = [
-  {
-    image: "/16.png",
-    title: "Gesprächskonzert mit Studierenden der Kompositions- und Instrumentalklassen der HMTM",
-    work: "»Niemand ist da« für zwei Schlagzeuger",
-    date: "2017/03/21",
-    place: "Germany / Munich / Gasteig",
-    performers: "Percussion I: Godwin Schmid / Percussion II: Patrick Stapleton"
-  },
-  {
-    image: "/15.png",
-    title: "Weimarer Frühjahrstage für zeitgenössische Musik 2020",
-    work: "»Distorsion« für Orchester",
-    date: "2020/09/09",
-    place: "Germany / Weimar / Weimarhalle",
-    performers: "Thüringer Symphoniker Saalfeld-Rudolstadt / Conductor: Oliver Weder"
-  },
-  {
-    image: "/14.jpg",
-    title: "adevantgarde präsentiert Der Neue Hoagartn",
-    work: "»Fünf kleine Stücke (Stützen)« für Klavier solo",
-    date: "2020/11/09",
-    place: "Germany / Munich / Einstein Kultur",
-    performers: "Pianist: Florian Daniel"
-  },
-  {
-    image: "/13.png",
-    title: "21 Deutscher Musikwettbewerb",
-    work: "»Zwei oder eins« für zwei Celli",
-    date: "2021/08/10",
-    place: "Germany / Freiburg / Hochschule für Musik Freiburg, Großkonzertsaal",
-    performers: "Cellists: Konstantin Bruns / Christoph Heesch"
-  },
-  {
-    image: "/12.jpg",
-    title: "공간소리 기획공연 나의소리2",
-    work: "»Rauschen« für Oboe, Klavier und Violoncello",
-    date: "2022/06/09",
-    place: "Korea / Seoul / Seoul Arts Center",
-    performers: "Piano: Hyesung Yoon / Cello: Yoona Joo / Oboe: Joongyeon Ahn"
-  },
-  {
-    image: "/11.png",
-    title: "2022 소담아트홀 기획공연",
-    work: "»해금과 오르간을 위한 돌고돌아 강강술래«",
-    date: "2022/06/18",
-    place: "Korea / Daegu / Sodam Art Hall",
-    performers: "Organ: Jeongyun Keum / Haegeum: Sihyun Jeon"
-  },
-  {
-    image: "/10.jpg",
-    title: "Daegu contemporary music festival",
-    work: "»Nicht nichts Besonderes« für Klarinette in B, Schlagzeug, Klavier und Violoncello",
-    date: "2022/08/25",
-    place: "Korea / Daegu / Daegu Concert House Chamber Hall",
-    performers: "Ensemble Handwerk"
-  },
-  {
-    image: "/9.jpeg",
-    title: "한국가곡 100년의 소리",
-    work: "»소프라노와 피아노를 위한 마중«",
-    date: "2022/09/15",
-    place: "Korea / Daegu / Daegu Cultural Arts Center Palgong Hall",
-    performers: "Baritone: Isaac Lee / Piano: Sunmin Park"
-  },
-  {
-    image: "/8.png",
-    title: "2023 KOCOA Music Festival",
-    work: "»Melos« for Flute, Clarinet in Bb, Piano, Violin and Cello",
-    date: "2023/03/22",
-    place: "Korea / Seoul / Seoul Arts Center",
-    performers: "Ensemble Eins"
-  },
-  {
-    image: "/7.png",
-    title: "THE 35th KRAKOW INTERNATIONAL FESTIVAL OF COMPOSERS",
-    work: "»Earnendel« for 7 Players",
-    date: "2023/04/15",
-    place: "Poland / Kraków / Manggha Museum of Japanese Art and Technology",
-    performers: "QUASARS ENSEMBLE"
-  },
-  {
-    image: "/6.png",
-    title: "2023 제 42회 대구국제음악제",
-    work: "Arr. »Also sprach Zarathustra MIX The Phantom Of the Opera«",
-    date: "2023/05/19",
-    place: "Korea / Daegu / Daegu Concert House Chamber Hall",
-    performers: "Korea Aerophone Ensemble"
-  },
-  {
-    image: "/5.png",
-    title: "남정훈 작곡발표회",
-    work: "",
-    date: "2023/06/11",
-    place: "Korea / Daegu / Daegu Concert House Chamber Hall",
-    performers: "Violin: Jihye Kim / Sujin Oh / Cello: Kookhwan Oh / Flute: Suyeong An / Accordion: Gippeum Hong / Clarinet: Eunjin Hwang / Piano: Dayoung Lee / Yeonwoo Park"
-  },
-  {
-    image: "/4.png",
-    title: "Bachfeest Eisenach",
-    work: "»Kollektiver Monolog« für Orchester",
-    date: "2023/10/27",
-    place: "Germany / Eisenach / Georgenkirche",
-    performers: "Thüringen Philharmonie Eisenach Gotha / Conductor: Markus Huber"
-  },
-  {
-    image: "/3.png",
-    title: "SoundT Ensemble 조우 시리즈 No.2",
-    work: "바리톤, 첼로, 피아노를 위한 »시김«",
-    date: "2023/11/29",
-    place: "Korea / Daegu / Sodam Art Hall",
-    performers: "Baritone: Kwangjun Yoo / Cello: Kookhwan Oh / Piano: Yoonji Lim"
-  },
-  {
-    image: "/2.png",
-    title: "대구콘서트하우스 특별연주회 이음",
-    work: "",
-    date: "2023/12/05",
-    place: "Korea / Daegu / Daegu Concert House Chamber Hall",
-    performers: "Violin: Sujin Kwon / Clarinet: Eunjin Hwang / Double Bass: Esther Jung / Piano: Dayoung Lee / Flute: Suyeong An / Percussion: Bohye Kim"
-  },
-  {
-    image: "/1.png",
-    title: "제5회 앙상블 보아즈 정기연주회",
-    work: "Piano quintet for »흩어지다 모이다«",
-    date: "2024/03/29",
-    place: "Korea / Daegu / Daegu Concert House Chamber Hall",
-    performers: "Ensemble Boaz"
-  }
-];
-
-const itemsPerPage = 5;
 ---
-
 <Layout title="Events">
-
 <style>
   .container {
     max-width: 1000px;
@@ -144,140 +9,61 @@ const itemsPerPage = 5;
     padding: 0 20px;
     color: #ddd;
   }
-
   h1 {
     font-size: 28px;
     margin-bottom: 50px;
   }
-
   .event {
     display: flex;
     gap: 30px;
     margin-bottom: 70px;
     align-items: flex-start;
   }
-
   .event img {
     width: 200px;
     height: auto;
   }
-
   .info {
     font-size: 16px;
     line-height: 1.9;
   }
-
   .title {
     font-size: 18px;
     margin-bottom: 10px;
   }
-
-  .work {
-    margin-bottom: 10px;
-  }
-
   .date {
     margin-bottom: 6px;
   }
-
-  .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 60px;
-  }
-
-  .pagination a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-
-  .pagination a:hover {
-    opacity: 0.6;
-  }
-
-  .pagination .active {
-    font-weight: 600;
-  }
-
   @media (max-width: 768px) {
     .event {
       flex-direction: column;
     }
-
     .event img {
       width: 100%;
     }
   }
 </style>
-
 <div class="container">
-
   <h1>EVENTS</h1>
-
-  <div id="events-list"></div>
-
-  <div class="pagination">
-    <a href="/events?page=1" data-page="1">1</a>
-    <a href="/events?page=2" data-page="2">2</a>
-    <a href="/events?page=3" data-page="3">3</a>
-    <a href="/events?page=4" data-page="4">4</a>
+  <!-- 🔥 최신 (2.png) -->
+  <div class="event">
+    <img src="/2.png" />
+    <div class="info">
+      <div class="title">»Distorsion« für Orchester</div>
+      <div class="date">09/09/2020</div>
+      <div>Germany / Weimarhalle</div>
+      <div>Thüringer Symphoniker Saalfeld-Rudolstadt / Conductor : Oliver Weder</div>
+    </div>
   </div>
-
+  <!-- 🔥 이전 (1.png) -->
+  <div class="event">
+    <img src="/1.png" />
+    <div class="info">
+      <div class="title">»Niemand ist da« für zwei Schlagzeuger</div>
+      <div class="date">03/21/2017</div>
+      <div>Germany / Junge Solisten gespräch Konzert in Gasteig in München</div>
+      <div>Percussion I : Godwin Schmid / Percussion II : Patrick Stapelton</div>
+    </div>
+  </div>
 </div>
-
-<script define:vars={{ events, itemsPerPage }}>
-  const params = new URLSearchParams(window.location.search);
-  const currentPage = Number(params.get("page")) || 1;
-
-  const start = (currentPage - 1) * itemsPerPage;
-  const currentEvents = events.slice(start, start + itemsPerPage);
-
-  const list = document.getElementById("events-list");
-
-  if (list) {
-    list.innerHTML = currentEvents.map((event) => `
-      <div class="event">
-
-        <img src="${event.image}" alt="${event.title}">
-
-        <div class="info">
-
-          <div class="title">
-            ${event.title}
-          </div>
-
-          ${
-            event.work
-              ? `<div class="work">${event.work}</div>`
-              : ""
-          }
-
-          <div class="date">
-            ${event.date}
-          </div>
-
-          <div>
-            ${event.place}
-          </div>
-
-          <div>
-            ${event.performers}
-          </div>
-
-        </div>
-
-      </div>
-    `).join("");
-  }
-
-  document.querySelectorAll(".pagination a").forEach((link) => {
-    if (Number(link.dataset.page) === currentPage) {
-      link.classList.add("active");
-    }
-  });
-</script>
-
 </Layout>
