@@ -1,7 +1,6 @@
 ---
 const { title } = Astro.props;
 ---
-
 <html>
   <head>
     <title>{title}</title>
@@ -46,13 +45,13 @@ const { title } = Astro.props;
         gap: 40px;
         margin: 0;
         padding: 0;
-        text-transform: uppercase;
       }
 
       nav a {
         text-decoration: none;
         color: white;
-        font-weight: 600;
+        font-weight: 500;
+        text-transform: uppercase;
       }
 
       nav a:hover {
@@ -61,17 +60,33 @@ const { title } = Astro.props;
 
       .sns {
         display: flex;
-        gap: 20px;
+        gap: 22px;
       }
 
       .sns img {
-        height: 22px;
+        height: 24px;
+      }
+
+      .sns img:hover {
+        opacity: 0.7;
+      }
+
+      /* 🔥 핵심: 배경 유지 */
+      .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+      }
+
+      .center-image img {
+        max-width: 850px;
+        width: 90%;
       }
 
       main {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 40px 20px;
       }
     </style>
   </head>
@@ -80,7 +95,6 @@ const { title } = Astro.props;
 
     <header>
 
-      <!-- 로고 -->
       <div class="logo">
         <a href="/">
           <div class="name">Junghoon Nam</div>
@@ -88,17 +102,16 @@ const { title } = Astro.props;
         </a>
       </div>
 
-      <!-- 메뉴 -->
       <nav>
         <ul>
           <li><a href="/about">ABOUT</a></li>
           <li><a href="/works">WORKS</a></li>
           <li><a href="/events">EVENTS</a></li>
+          <li><a href="/archive">ARCHIVE</a></li>
           <li><a href="/contact">CONTACT</a></li>
         </ul>
       </nav>
 
-      <!-- SNS -->
       <div class="sns">
         <a href="https://www.instagram.com/junghoon.n/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
@@ -115,7 +128,13 @@ const { title } = Astro.props;
 
     </header>
 
-    <!-- 🔥 핵심: 이미지 완전 삭제됨 -->
+    <!-- 🔥 홈에서만 보이게 -->
+    {title === "Home" && (
+      <div class="center-image">
+        <img src="/mybackground.jpg">
+      </div>
+    )}
+
     <main>
       <slot />
     </main>
