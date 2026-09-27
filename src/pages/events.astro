@@ -103,48 +103,35 @@ import Layout from '../layouts/Layout.astro';
   }
 </style>
 
-
 <div class="container">
 
   <h1>EVENTS</h1>
 
 
-  <!-- ==================================================
+  <!-- =========================================
        PAGE 1
-       가장 최근 페이지
-       13 → 14 → 15 → 16
-       ================================================== -->
+       최신 페이지
+       16 → 15 → 14 → 13 → 12 → 11 → 10 → 9
+       ========================================= -->
 
+
+  <!-- 16 -->
   <div class="event" data-page="1">
     <div class="poster">
-      <img src="/13.png" alt="Bachfeest Eisenach">
+      <img src="/16.png" alt="Ensemble Boaz">
     </div>
 
     <div class="info">
-      <div class="title">Bachfeest Eisenach</div>
-      <div class="work">»Kollektiver Monolog« für Orchester</div>
-      <div class="date">2023/10/27</div>
-      <div>Germany / Eisenach / Georgenkirche</div>
-      <div>Thüringen Philharmonie Eisenach Gotha / Conductor: Markus Huber</div>
+      <div class="title">제5회 앙상블 보아즈 정기연주회</div>
+      <div class="work">Piano quintet for »흩어지다 모이다«</div>
+      <div class="date">2024/03/29</div>
+      <div>Korea / Daegu / Daegu Concert House Chamber Hall</div>
+      <div>Ensemble Boaz</div>
     </div>
   </div>
 
 
-  <div class="event" data-page="1">
-    <div class="poster">
-      <img src="/14.jpg" alt="SoundT Ensemble">
-    </div>
-
-    <div class="info">
-      <div class="title">SoundT Ensemble 조우 시리즈 No.2</div>
-      <div class="work">바리톤, 첼로, 피아노를 위한 »시김«</div>
-      <div class="date">2023/11/29</div>
-      <div>Korea / Daegu / Sodam Art Hall</div>
-      <div>Baritone: Kwangjun Yoo / Cello: Kookhwan Oh / Piano: Yoonji Lim</div>
-    </div>
-  </div>
-
-
+  <!-- 15 -->
   <div class="event" data-page="1">
     <div class="poster">
       <img src="/15.png" alt="Daegu Concert House">
@@ -163,88 +150,40 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
 
+  <!-- 14 -->
   <div class="event" data-page="1">
     <div class="poster">
-      <img src="/16.png" alt="Ensemble Boaz">
+      <img src="/14.jpg" alt="SoundT Ensemble">
     </div>
 
     <div class="info">
-      <div class="title">제5회 앙상블 보아즈 정기연주회</div>
-      <div class="work">Piano quintet for »흩어지다 모이다«</div>
-      <div class="date">2024/03/29</div>
-      <div>Korea / Daegu / Daegu Concert House Chamber Hall</div>
-      <div>Ensemble Boaz</div>
+      <div class="title">SoundT Ensemble 조우 시리즈 No.2</div>
+      <div class="work">바리톤, 첼로, 피아노를 위한 »시김«</div>
+      <div class="date">2023/11/29</div>
+      <div>Korea / Daegu / Sodam Art Hall</div>
+      <div>Baritone: Kwangjun Yoo / Cello: Kookhwan Oh / Piano: Yoonji Lim</div>
     </div>
   </div>
 
 
-
-  <!-- ==================================================
-       PAGE 2
-       8 → 9 → 10 → 11 → 12
-       ================================================== -->
-
-  <div class="event" data-page="2">
+  <!-- 13 -->
+  <div class="event" data-page="1">
     <div class="poster">
-      <img src="/8.png" alt="Korean Art Song">
+      <img src="/13.png" alt="Bachfeest Eisenach">
     </div>
 
     <div class="info">
-      <div class="title">한국가곡 100년의 소리</div>
-      <div class="work">»소프라노와 피아노를 위한 마중«</div>
-      <div class="date">2022/09/15</div>
-      <div>Korea / Daegu / Daegu Cultural Arts Center Palgong Hall</div>
-      <div>Baritone: Isaac Lee / Piano: Sunmin Park</div>
+      <div class="title">Bachfeest Eisenach</div>
+      <div class="work">»Kollektiver Monolog« für Orchester</div>
+      <div class="date">2023/10/27</div>
+      <div>Germany / Eisenach / Georgenkirche</div>
+      <div>Thüringen Philharmonie Eisenach Gotha / Conductor: Markus Huber</div>
     </div>
   </div>
 
 
-  <div class="event" data-page="2">
-    <div class="poster">
-      <img src="/9.jpeg" alt="KOCOA Music Festival">
-    </div>
-
-    <div class="info">
-      <div class="title">2023 KOCOA Music Festival</div>
-      <div class="work">»Melos« for Flute, Clarinet in Bb, Piano, Violin and Cello</div>
-      <div class="date">2023/03/22</div>
-      <div>Korea / Seoul / Seoul Arts Center</div>
-      <div>Ensemble Eins</div>
-    </div>
-  </div>
-
-
-  <div class="event" data-page="2">
-    <div class="poster">
-      <img src="/10.jpg" alt="Krakow International Festival">
-    </div>
-
-    <div class="info">
-      <div class="title">THE 35th KRAKOW INTERNATIONAL FESTIVAL OF COMPOSERS</div>
-      <div class="work">»Earnendel« for 7 Players</div>
-      <div class="date">2023/04/15</div>
-      <div>Poland / Kraków / Manggha Museum of Japanese Art and Technology</div>
-      <div>QUASARS ENSEMBLE</div>
-    </div>
-  </div>
-
-
-  <div class="event" data-page="2">
-    <div class="poster">
-      <img src="/11.png" alt="Daegu International Music Festival">
-    </div>
-
-    <div class="info">
-      <div class="title">2023 제 42회 대구국제음악제</div>
-      <div class="work">Arr. »Also sprach Zarathustra MIX The Phantom Of the Opera«</div>
-      <div class="date">2023/05/19</div>
-      <div>Korea / Daegu / Daegu Concert House Chamber Hall</div>
-      <div>Korea Aerophone Ensemble</div>
-    </div>
-  </div>
-
-
-  <div class="event" data-page="2">
+  <!-- 12 -->
+  <div class="event" data-page="1">
     <div class="poster">
       <img src="/12.jpg" alt="Junghoon Nam Composition Concert">
     </div>
@@ -265,73 +204,80 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
 
-
-  <!-- ==================================================
-       PAGE 3
-       3 → 4 → 5 → 6 → 7
-       ================================================== -->
-
-  <div class="event" data-page="3">
+  <!-- 11 -->
+  <div class="event" data-page="1">
     <div class="poster">
-      <img src="/3.png" alt="adevantgarde">
+      <img src="/11.png" alt="Daegu International Music Festival">
     </div>
 
     <div class="info">
-      <div class="title">adevantgarde präsentiert Der Neue Hoagartn</div>
-      <div class="work">»Fünf kleine Stücke (Stützen)« für Klavier solo</div>
-      <div class="date">2020/11/09</div>
-      <div>Germany / Munich / Einstein Kultur</div>
-      <div>Pianist: Florian Daniel</div>
+      <div class="title">2023 제 42회 대구국제음악제</div>
+      <div class="work">Arr. »Also sprach Zarathustra MIX The Phantom Of the Opera«</div>
+      <div class="date">2023/05/19</div>
+      <div>Korea / Daegu / Daegu Concert House Chamber Hall</div>
+      <div>Korea Aerophone Ensemble</div>
     </div>
   </div>
 
 
-  <div class="event" data-page="3">
+  <!-- 10 -->
+  <div class="event" data-page="1">
     <div class="poster">
-      <img src="/4.png" alt="Deutscher Musikwettbewerb">
+      <img src="/10.jpg" alt="Krakow International Festival">
     </div>
 
     <div class="info">
-      <div class="title">21 Deutscher Musikwettbewerb</div>
-      <div class="work">»Zwei oder eins« für zwei Celli</div>
-      <div class="date">2021/08/10</div>
-      <div>Germany / Freiburg / Hochschule für Musik Freiburg, Großkonzertsaal</div>
-      <div>Cellists: Konstantin Bruns / Christoph Heesch</div>
+      <div class="title">THE 35th KRAKOW INTERNATIONAL FESTIVAL OF COMPOSERS</div>
+      <div class="work">»Earnendel« for 7 Players</div>
+      <div class="date">2023/04/15</div>
+      <div>Poland / Kraków / Manggha Museum of Japanese Art and Technology</div>
+      <div>QUASARS ENSEMBLE</div>
     </div>
   </div>
 
 
-  <div class="event" data-page="3">
+  <!-- 9 -->
+  <div class="event" data-page="1">
     <div class="poster">
-      <img src="/5.png" alt="공간소리">
+      <img src="/9.jpeg" alt="KOCOA Music Festival">
     </div>
 
     <div class="info">
-      <div class="title">공간소리 기획공연 나의소리2</div>
-      <div class="work">»Rauschen« für Oboe, Klavier und Violoncello</div>
-      <div class="date">2022/06/09</div>
+      <div class="title">2023 KOCOA Music Festival</div>
+      <div class="work">»Melos« for Flute, Clarinet in Bb, Piano, Violin and Cello</div>
+      <div class="date">2023/03/22</div>
       <div>Korea / Seoul / Seoul Arts Center</div>
-      <div>Piano: Hyesung Yoon / Cello: Yoona Joo / Oboe: Joongyeon Ahn</div>
+      <div>Ensemble Eins</div>
     </div>
   </div>
 
 
-  <div class="event" data-page="3">
+
+  <!-- =========================================
+       PAGE 2
+       과거 페이지
+       8 → 7 → 6 → 5 → 4 → 3 → 2 → 1
+       ========================================= -->
+
+
+  <!-- 8 -->
+  <div class="event" data-page="2">
     <div class="poster">
-      <img src="/6.png" alt="Sodam Art Hall">
+      <img src="/8.png" alt="Korean Art Song">
     </div>
 
     <div class="info">
-      <div class="title">2022 소담아트홀 기획공연</div>
-      <div class="work">»해금과 오르간을 위한 돌고돌아 강강술래«</div>
-      <div class="date">2022/06/18</div>
-      <div>Korea / Daegu / Sodam Art Hall</div>
-      <div>Organ: Jeongyun Keum / Haegeum: Sihyun Jeon</div>
+      <div class="title">한국가곡 100년의 소리</div>
+      <div class="work">»소프라노와 피아노를 위한 마중«</div>
+      <div class="date">2022/09/15</div>
+      <div>Korea / Daegu / Daegu Cultural Arts Center Palgong Hall</div>
+      <div>Baritone: Isaac Lee / Piano: Sunmin Park</div>
     </div>
   </div>
 
 
-  <div class="event" data-page="3">
+  <!-- 7 -->
+  <div class="event" data-page="2">
     <div class="poster">
       <img src="/7.png" alt="Daegu Contemporary Music Festival">
     </div>
@@ -346,14 +292,88 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
 
+  <!-- 6 -->
+  <div class="event" data-page="2">
+    <div class="poster">
+      <img src="/6.png" alt="Sodam Art Hall">
+    </div>
 
-  <!-- ==================================================
-       PAGE 4
-       가장 오래된 페이지
-       1 → 2
-       ================================================== -->
+    <div class="info">
+      <div class="title">2022 소담아트홀 기획공연</div>
+      <div class="work">»해금과 오르간을 위한 돌고돌아 강강술래«</div>
+      <div class="date">2022/06/18</div>
+      <div>Korea / Daegu / Sodam Art Hall</div>
+      <div>Organ: Jeongyun Keum / Haegeum: Sihyun Jeon</div>
+    </div>
+  </div>
 
-  <div class="event" data-page="4">
+
+  <!-- 5 -->
+  <div class="event" data-page="2">
+    <div class="poster">
+      <img src="/5.png" alt="공간소리">
+    </div>
+
+    <div class="info">
+      <div class="title">공간소리 기획공연 나의소리2</div>
+      <div class="work">»Rauschen« für Oboe, Klavier und Violoncello</div>
+      <div class="date">2022/06/09</div>
+      <div>Korea / Seoul / Seoul Arts Center</div>
+      <div>Piano: Hyesung Yoon / Cello: Yoona Joo / Oboe: Joongyeon Ahn</div>
+    </div>
+  </div>
+
+
+  <!-- 4 -->
+  <div class="event" data-page="2">
+    <div class="poster">
+      <img src="/4.png" alt="Deutscher Musikwettbewerb">
+    </div>
+
+    <div class="info">
+      <div class="title">21 Deutscher Musikwettbewerb</div>
+      <div class="work">»Zwei oder eins« für zwei Celli</div>
+      <div class="date">2021/08/10</div>
+      <div>Germany / Freiburg / Hochschule für Musik Freiburg, Großkonzertsaal</div>
+      <div>Cellists: Konstantin Bruns / Christoph Heesch</div>
+    </div>
+  </div>
+
+
+  <!-- 3 -->
+  <div class="event" data-page="2">
+    <div class="poster">
+      <img src="/3.png" alt="adevantgarde">
+    </div>
+
+    <div class="info">
+      <div class="title">adevantgarde präsentiert Der Neue Hoagartn</div>
+      <div class="work">»Fünf kleine Stücke (Stützen)« für Klavier solo</div>
+      <div class="date">2020/11/09</div>
+      <div>Germany / Munich / Einstein Kultur</div>
+      <div>Pianist: Florian Daniel</div>
+    </div>
+  </div>
+
+
+  <!-- 2 -->
+  <div class="event" data-page="2">
+    <div class="poster">
+      <img src="/2.png" alt="Distorsion">
+    </div>
+
+    <div class="info">
+      <div class="title">Weimarer Frühjahrstage für zeitgenössische Musik 2020</div>
+      <div class="work">»Distorsion« für Orchester</div>
+      <div class="date">2020/09/09</div>
+      <div>Germany / Weimar / Weimarhalle</div>
+      <div>Thüringer Symphoniker Saalfeld-Rudolstadt / Conductor: Oliver Weder</div>
+    </div>
+  </div>
+
+
+  <!-- 1 -->
+  <div class="event" data-page="2">
     <div class="poster">
       <img src="/1.png" alt="Niemand ist da">
     </div>
@@ -370,28 +390,12 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
 
-  <div class="event" data-page="4">
-    <div class="poster">
-      <img src="/2.png" alt="Distorsion">
-    </div>
-
-    <div class="info">
-      <div class="title">Weimarer Frühjahrstage für zeitgenössische Musik 2020</div>
-      <div class="work">»Distorsion« für Orchester</div>
-      <div class="date">2020/09/09</div>
-      <div>Germany / Weimar / Weimarhalle</div>
-      <div>Thüringer Symphoniker Saalfeld-Rudolstadt / Conductor: Oliver Weder</div>
-    </div>
-  </div>
-
 
   <!-- 페이지 번호 -->
 
   <div class="pagination">
     <button class="page-button active" data-page-button="1">1</button>
     <button class="page-button" data-page-button="2">2</button>
-    <button class="page-button" data-page-button="3">3</button>
-    <button class="page-button" data-page-button="4">4</button>
   </div>
 
 </div>
